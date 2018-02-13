@@ -440,7 +440,7 @@ ID | The ID of the invoice to retrieve
 ## Update a specific invoice
 
 ```shell
-curl "http://app.ordermentum.com/api/invoices/9AD783F1-4E1E-4396-A317-D528C99E177D"
+curl "http://app.ordermentum.com/v1/invoices/9AD783F1-4E1E-4396-A317-D528C99E177D"
   -X PUT
   -D '{"cancelledAt": "2016-12-01T05:44:59.223Z" }'
   -H "Authorization: UNIQUE_TOKEN"

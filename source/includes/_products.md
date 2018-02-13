@@ -183,7 +183,7 @@ curl "https://api.ordermentum.com/v1/products"
 }
 ```
 
-This endpoint retrieves all orders.
+This endpoint retrieves all products.
 
 ### HTTP Request
 
@@ -194,8 +194,8 @@ This endpoint retrieves all orders.
 Parameter | Default | Description
 --------- | ------- | -----------
 pageNo | 1 | Page number
-pageSize | 25 | Number of orders in the response
-supplierId | null | The supplier to retreive the orders for
+pageSize | 25 | Number of products in the response
+supplierId | null | The supplier to retreive the products for
 
 ## Get a Specific Order
 
@@ -377,7 +377,7 @@ ID | The ID of the order to retrieve
 ## Update a specific order
 
 ```shell
-curl "http://app.ordermentum.com/api/orders/9AD783F1-4E1E-4396-A317-D528C99E177D"
+curl "http://app.ordermentum.com/v1/products/9AD783F1-4E1E-4396-A317-D528C99E177D"
   -X PUT
   -D '{"cancelledAt": "2016-12-01T05:44:59.223Z" }'
   -H "Authorization: UNIQUE_TOKEN"
@@ -389,7 +389,7 @@ This endpoint updates a specific order.
 
 ### HTTP Request
 
-`PUT http://app.ordermentum.com/orders/<ID>`
+`PUT http://app.ordermentum.com/products/<ID>`
 
 ### URL Parameters
 
@@ -397,3 +397,25 @@ Parameter | Description
 --------- | -----------
 ID | The ID of the order to delete
 
+
+## Delete a specific product
+
+```shell
+curl "http://app.ordermentum.com/v1/products/9AD783F1-4E1E-4396-A317-D528C99E177D"
+  -X DELETE
+  -H "Authorization: UNIQUE_TOKEN"
+```
+
+> The above command returns JSON structured the same a GET request
+
+This endpoint deletes a specific product
+
+### HTTP Request
+
+`DELETE http://app.ordermentum.com/v1/products/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the webhook to delete

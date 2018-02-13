@@ -183,7 +183,7 @@ curl "https://api.ordermentum.com/v1/webhooks"
 }
 ```
 
-This endpoint retrieves all orders.
+This endpoint retrieves all webhooks.
 
 ### HTTP Request
 
@@ -194,9 +194,9 @@ This endpoint retrieves all orders.
 Parameter | Default | Description
 --------- | ------- | -----------
 pageNo | 1 | Page number
-pageSize | 25 | Number of orders in the response
-retailerId | null | The retailer to retreive the orders for
-supplierId | null | The supplier to retreive the orders for
+pageSize | 25 | Number of webhooks in the response
+retailerId | null | The retailer to retreive the webhooks for
+supplierId | null | The supplier to retreive the webhooks for
 
 ## Get a Specific Order
 
@@ -363,7 +363,7 @@ curl "http://app.ordermentum.com/v1/webhooks/69B34C71-3D61-4D40-92DE-BD7954D26BD
 }
 ```
 
-This endpoint retrieves a specific order.
+This endpoint retrieves a specific webhook.
 
 ### HTTP Request
 
@@ -373,28 +373,49 @@ This endpoint retrieves a specific order.
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the order to retrieve
+ID | The ID of the webhook to retrieve
 
-## Update a specific order
+## Update a specific webhook
 
 ```shell
-curl "http://app.ordermentum.com/api/orders/9AD783F1-4E1E-4396-A317-D528C99E177D"
+curl "http://app.ordermentum.com/v1/webhooks/9AD783F1-4E1E-4396-A317-D528C99E177D"
   -X PUT
-  -D '{"cancelledAt": "2016-12-01T05:44:59.223Z" }'
+  -D '{"name": "Test Webhook" }'
   -H "Authorization: UNIQUE_TOKEN"
 ```
 
 > The above command returns JSON structured the same a GET request
 
-This endpoint updates a specific order.
+This endpoint updates a specific webhook
 
 ### HTTP Request
 
-`PUT http://app.ordermentum.com/orders/<ID>`
+`PUT http://app.ordermentum.com/webhooks/<ID>`
 
 ### URL Parameters
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the order to delete
+ID | The ID of the webhook to update
 
+## Delete a specific webhook
+
+```shell
+curl "http://app.ordermentum.com/v1/webhooks/9AD783F1-4E1E-4396-A317-D528C99E177D"
+  -X DELETE
+  -H "Authorization: UNIQUE_TOKEN"
+```
+
+> The above command returns JSON structured the same a GET request
+
+This endpoint deletes a specific webhook
+
+### HTTP Request
+
+`DELETE http://app.ordermentum.com/v1/webhooks/<ID>`
+
+### URL Parameters
+
+Parameter | Description
+--------- | -----------
+ID | The ID of the webhook to delete
