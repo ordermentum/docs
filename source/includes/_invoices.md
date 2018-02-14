@@ -19,11 +19,11 @@ curl "https://api.ordermentum.com/v1/invoices"
     "pageNo": 1
   },
   "links": {
-    "self": "https://app.ordermentum.com/v1/products?supplierId=a5cad00b-0c85-4d95-ab3f-9fb1933dbeed&pageNo=3",
-    "first": "https://app.ordermentum.com/v1/products?supplierId=bd4b8236-1649-49a5-aa6e-2d0f0e9407ea&pageNo=1",
-    "prev": "https://app.ordermentum.com/v1/products?supplierId=44c2ae51-b2eb-4f86-b021-fc7d181f5b65&pageNo=2",
-    "next": "https://app.ordermentum.com/v1/products?supplierId=561b48a5-f292-4f5c-abfe-3d7ff70ee91b&pageNo=4",
-    "last": "https://app.ordermentum.com/v1/products?supplierId=5331fea9-52e3-427d-bae8-57f1b7c7edd8&pageNo=9"
+    "self": "https://app.ordermentum.com/v1/invoices?supplierId=a5cad00b-0c85-4d95-ab3f-9fb1933dbeed&pageNo=3",
+    "first": "https://app.ordermentum.com/v1/invoices?supplierId=bd4b8236-1649-49a5-aa6e-2d0f0e9407ea&pageNo=1",
+    "prev": "https://app.ordermentum.com/v1/invoices?supplierId=44c2ae51-b2eb-4f86-b021-fc7d181f5b65&pageNo=2",
+    "next": "https://app.ordermentum.com/v1/invoices?supplierId=561b48a5-f292-4f5c-abfe-3d7ff70ee91b&pageNo=4",
+    "last": "https://app.ordermentum.com/v1/invocies?supplierId=5331fea9-52e3-427d-bae8-57f1b7c7edd8&pageNo=9"
   },
   "data": [
     {
@@ -214,7 +214,7 @@ curl "https://api.ordermentum.com/v1/invoices"
 }
 ```
 
-This endpoint retrieves all orders.
+This endpoint retrieves all invoices.
 
 ### HTTP Request
 
@@ -225,9 +225,9 @@ This endpoint retrieves all orders.
 Parameter | Default | Description
 --------- | ------- | -----------
 pageNo | 1 | Page number
-pageSize | 25 | Number of orders in the response
-retailerId | null | The retailer to retreive the orders for
-supplierId | null | The supplier to retreive the orders for
+pageSize | 25 | Number of invoices in the response
+retailerId | null | The retailer to retreive the invoices for
+supplierId | null | The supplier to retreive the invoices for
 
 ## Get a Specific Invoice
 
@@ -458,5 +458,5 @@ This endpoint updates a specific invoice.
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the order to delete
+ID | The ID of the order to update
 

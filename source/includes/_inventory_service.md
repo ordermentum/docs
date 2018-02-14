@@ -2,7 +2,7 @@
 
 An Inventory Service is a third party warehouse that prepares and ships orders on behalf of the supplier.
 
-Using the Inventory Service API, you can register, edit and delete a new inventory service. When you register a new inventory service, you will need to expose the two following GET endpoints:
+Using the Inventory Service API, you can register, edit and delete a new inventory service. When you register a new inventory service, you will need to expose the following GET endpoints:
 
     stock: Where Ordermentum can retrieve inventory levels for an order
 
@@ -10,8 +10,6 @@ For example when Ordermentum is going to place an order it will confirm if the s
 
 ```shell
 curl "https://myapp.com/fetch_stock.json"
--D "..."
--X POST
 ```
 > Example request data
 
@@ -94,7 +92,7 @@ curl "http://app.ordermentum.com/v1/inventory-services/69B34C71-3D61-4D40-92DE-B
   "id": "b1da7ace-824e-4e69-8463-f0c70d7fac0b",
   "name": "Inventory Service",
   "supplierId": "503be8e5-15cb-4aa1-bf9b-15c28dff0fb4",
-  "stockCallback": "https://myapp.com/fetch_stock.json",
+  "stock": "https://myapp.com/fetch_stock.json",
   "createdAt": "2016-12-01T05:44:59.223Z",
   "createdBy": "cb8898d9-6072-4e2a-be8a-44409606322c",
   "updatedAt": "2016-12-01T05:44:59.223Z",
