@@ -78,7 +78,39 @@ pageNo | 1 | Page number
 pageSize | 25 | Number of inventory services in the response
 supplierId | null | The supplier to retreive the inventory services for
 
-## Get a Specific Order
+## Create a Inventory Service
+
+```shell
+curl "http://app.ordermentum.com/v1/inventory-services/"
+  -H "Authorization: Bearer UNIQUE_TOKEN"
+  -X POST
+  -D '{}'
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "id": "b1da7ace-824e-4e69-8463-f0c70d7fac0b",
+  "name": "Inventory Service",
+  "supplierId": "503be8e5-15cb-4aa1-bf9b-15c28dff0fb4",
+  "stock": "https://myapp.com/fetch_stock.json",
+  "createdAt": "2016-12-01T05:44:59.223Z",
+  "createdBy": "cb8898d9-6072-4e2a-be8a-44409606322c",
+  "updatedAt": "2016-12-01T05:44:59.223Z",
+  "deletedAt": "2016-12-01T05:44:59.223Z",
+  "updatedBy": "2e5bdba0-a650-4bb5-a2c1-5eb7a20d1f5d"
+}
+```
+
+This endpoint retrieves a specific inventory service.
+
+### HTTP Request
+
+`POST http://app.ordermentum.com/v1/inventory-services/`
+
+
+## Get a Specific Inventory Service
 
 ```shell
 curl "http://app.ordermentum.com/v1/inventory-services/69B34C71-3D61-4D40-92DE-BD7954D26BD2"
@@ -101,7 +133,7 @@ curl "http://app.ordermentum.com/v1/inventory-services/69B34C71-3D61-4D40-92DE-B
 }
 ```
 
-This endpoint retrieves a specific webhook.
+This endpoint retrieves a specific inventory service.
 
 ### HTTP Request
 
@@ -111,9 +143,9 @@ This endpoint retrieves a specific webhook.
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the webhook to retrieve
+ID | The ID of the inventory service to retrieve
 
-## Update a specific webhook
+## Update a specific inventory service
 
 ```shell
 curl "http://app.ordermentum.com/v1/inventory-services/9AD783F1-4E1E-4396-A317-D528C99E177D"
@@ -124,7 +156,7 @@ curl "http://app.ordermentum.com/v1/inventory-services/9AD783F1-4E1E-4396-A317-D
 
 > The above command returns JSON structured the same a GET request
 
-This endpoint updates a specific webhook
+This endpoint updates a specific inventory service
 
 ### HTTP Request
 
@@ -134,9 +166,9 @@ This endpoint updates a specific webhook
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the webhook to update
+ID | The ID of the inventory service to update
 
-## Delete a specific webhook
+## Delete a specific inventory service
 
 ```shell
 curl "http://app.ordermentum.com/v1/inventory-services/9AD783F1-4E1E-4396-A317-D528C99E177D"
@@ -146,7 +178,7 @@ curl "http://app.ordermentum.com/v1/inventory-services/9AD783F1-4E1E-4396-A317-D
 
 > The above command returns JSON structured the same a GET request
 
-This endpoint deletes a specific webhook
+This endpoint deletes a specific inventory service
 
 ### HTTP Request
 
@@ -156,5 +188,5 @@ This endpoint deletes a specific webhook
 
 Parameter | Description
 --------- | -----------
-ID | The ID of the webhook to delete
+ID | The ID of the inventory service to delete
 

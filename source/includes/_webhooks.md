@@ -45,6 +45,34 @@ pageSize | 25 | Number of webhooks in the response
 retailerId | null | The retailer to retreive the webhooks for
 supplierId | null | The supplier to retreive the webhooks for
 
+
+## Create a Webhook
+
+```shell
+curl "http://app.ordermentum.com/v1/webhook"
+  -H "Authorization: Bearer UNIQUE_TOKEN"
+  -X POST
+  -D '{}'
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+  "id": "b1da7ace-824e-4e69-8463-f0c70d7fac0b",
+  "name": "Inventory Service",
+  "supplierId": "503be8e5-15cb-4aa1-bf9b-15c28dff0fb4",
+  "events": ["invoice_created", "invoice_updated"],
+  "createdAt": "2016-12-01T05:44:59.223Z",
+  "createdBy": "cb8898d9-6072-4e2a-be8a-44409606322c",
+  "updatedAt": "2016-12-01T05:44:59.223Z",
+  "deletedAt": "2016-12-01T05:44:59.223Z",
+  "updatedBy": "2e5bdba0-a650-4bb5-a2c1-5eb7a20d1f5d"
+}
+```
+
+This endpoint retrieves a specific webhook.
+
 ## Get a Specific Webhook
 
 ```shell
