@@ -13,7 +13,6 @@ includes:
   - invoices
   - products
   - webhooks
-  - inventory_service
   - errors
 
 search: true
