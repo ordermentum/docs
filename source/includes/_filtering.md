@@ -1,4 +1,4 @@
-## Fitlering
+# Filtering
 
 Most endpoints allow you to filter the results by dates
 
