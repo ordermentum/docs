@@ -191,12 +191,16 @@ This endpoint retrieves all orders.
 
 ### Query Parameters
 
-Parameter | Default | Description
---------- | ------- | -----------
-pageNo | 1 | Page number
-pageSize | 25 | Number of orders in the response
-retailerId | null | The retailer to retreive the orders for
-supplierId | null | The supplier to retreive the orders for
+| Parameter   | Default | Description                              |
+| ----------- | ------- | ---------------------------------------- |
+| pageNo      | 1       | Page number                              |
+| pageSize    | 25      | Number of orders in the response         |
+| retailerId  | null    | The retailer to retreive the orders for  |
+| supplierId  | null    | The supplier to retreive the orders for  |
+| purchaserId | null    | The purchaser to retrieve the orders for |
+| createdAt   | null    | when the order was created               |
+| updatedAt   | null    | when the order was last updated          |
+
 
 ## Get a Specific Order
 
@@ -371,9 +375,43 @@ This endpoint retrieves a specific order.
 
 ### URL Parameters
 
-Parameter | Description
---------- | -----------
-ID | The ID of the order to retrieve
+| Parameter | Description                     |
+| --------- | ------------------------------- |
+| ID        | The ID of the order to retrieve |
+
+
+## Create a sales order
+
+```shell
+curl "http://app.ordermentum.com/v1/orders"
+  -X POST
+  -D '{ "purchaserId": "1989fb1d-e1ab-46e2-82a2-e879ae17a461", "retailerId": "4502a92e-4aa3-43d3-af9c-b79a4f248627", "supplierId" : "04baab6c-3f28-40d5-8edf-d5723bc92841", lineItems: [{ "productId": "fab1cbcc-60c5-428b-9934-6577a581c401", "quantity": 2 }], "comment": "", "reference": "" }'
+  -H "Authorization: UNIQUE_TOKEN"
+```
+
+### Parameters
+
+Order
+
+| Parameter    | Required | Description                                              |
+| ------------ | -------- | -------------------------------------------------------- |
+| retailerId   | true     | The retailer to create the orders for                    |
+| supplierId   | true     | The supplier to create the orders for                    |
+| purchaserId  | true     | The purchaser to create the orders for                   |
+| deliveryDate | false    | The delivery/dispatch date of the order                  |
+| comments     | false    | comments for the delivery                                |
+| reference    | false    | PO Number                                                |
+| lineItems    | true     | An array of line items see below for line item structure |
+
+
+LineItem
+
+| Parameter | Required | Description                             |
+| --------- | -------- | --------------------------------------- |
+| productId | true     | The retailer to retreive the orders for |
+| quantity  | true     | An array of line items                  |
+
+
 
 ## Update a specific order
 
@@ -394,7 +432,7 @@ This endpoint updates a specific order.
 
 ### URL Parameters
 
-Parameter | Description
---------- | -----------
-ID | The ID of the order to delete
+| Parameter | Description                   |
+| --------- | ----------------------------- |
+| ID        | The ID of the order to delete |
 

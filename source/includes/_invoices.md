@@ -222,12 +222,16 @@ This endpoint retrieves all invoices.
 
 ### Query Parameters
 
-Parameter | Default | Description
---------- | ------- | -----------
-pageNo | 1 | Page number
-pageSize | 25 | Number of invoices in the response
-retailerId | null | The retailer to retreive the invoices for
-supplierId | null | The supplier to retreive the invoices for
+| Parameter   | Default | Description                                |
+| ----------- | ------- | ------------------------------------------ |
+| pageNo      | 1       | Page number                                |
+| pageSize    | 25      | Number of invoices in the response         |
+| retailerId  | null    | The retailer to retreive the invoices for  |
+| supplierId  | null    | The supplier to retreive the invoices for  |
+| purchaserId | null    | The purchaser to retrieve the invoices for |
+| createdAt   | null    | when the order was created                 |
+| updatedAt   | null    | when the order was last updated            |
+
 
 ## Get a Specific Invoice
 
@@ -433,9 +437,9 @@ This endpoint retrieves a specific invoice.
 
 ### URL Parameters
 
-Parameter | Description
---------- | -----------
-ID | The ID of the invoice to retrieve
+| Parameter | Description                       |
+| --------- | --------------------------------- |
+| ID        | The ID of the invoice to retrieve |
 
 ## Update a specific invoice
 
@@ -456,7 +460,7 @@ This endpoint updates a specific invoice.
 
 ### URL Parameters
 
-Parameter | Description
---------- | -----------
-ID | The ID of the order to update
+| Parameter | Description                   |
+| --------- | ----------------------------- |
+| ID        | The ID of the order to update |
 
