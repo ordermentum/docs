@@ -2,6 +2,9 @@
 
 ## Get All Purchasers
 
+To get all purchasers (customers) for a customer you make a request to the purchasers endpoint with
+your supplierId
+
 ```shell
 curl "https://api.ordermentum.com/v1/purchasers?supplierId=a5cad00b-0c85-4d95-ab3f-9fb1933dbeed"
   -H "Authorization: Bearer UNIQUE_TOKEN"
@@ -78,8 +81,8 @@ This endpoint retrieves all purchasers
 | pageNo     | 1       | Page number                                 |
 | pageSize   | 25      | Number of purchasers in the response        |
 | supplierId | null    | The supplier to retreive the purchasers for |
-| createdAt  | null    | when the order was created                  |
-| updatedAt  | null    | when the order was last updated             |
+| createdAt  | null    | when the purchaser was created              |
+| updatedAt  | null    | when the purchaser was last updated         |
 
 
 ## Get a Specific Purchaser

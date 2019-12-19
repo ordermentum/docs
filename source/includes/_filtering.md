@@ -1,6 +1,8 @@
 # Filtering
 
-Most endpoints allow you to filter the results by dates
+Most endpoints allow you to filter the results by dates.
+
+All timestamps are all in ISO 8601 format.
 
 ```shell
 curl "http://app.ordermentum.com/v1/orders?createdAt[gte]=2019-11-15T01:16:15.139Z"

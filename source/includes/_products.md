@@ -7,7 +7,6 @@
 curl "https://api.ordermentum.com/v1/products"
   -H "Authorization: Bearer UNIQUE_TOKEN"
 ```
-
 > The above command returns JSON structured like this:
 
 ```json
@@ -33,13 +32,26 @@ curl "https://api.ordermentum.com/v1/products"
       "createdBy": "cb8898d9-6072-4e2a-be8a-44409606322c",
       "updatedAt": "2016-12-01T05:44:59.223Z",
       "deletedAt": "2016-12-01T05:44:59.223Z",
-      "updatedBy": "2e5bdba0-a650-4bb5-a2c1-5eb7a20d1f5d"
+      "updatedBy": "2e5bdba0-a650-4bb5-a2c1-5eb7a20d1f5d",
+      "images": {
+        "original": "https://ordermentum-res.cloudinary.com/image/upload/v1547682813/tcsklsh6yuevsnjzf9rf.png",
+        "logo": "https://ordermentum-res.cloudinary.com/image/upload/w_40,h_40,c_pad/v1547682813/tcsklsh6yuevsnjzf9rf.png",
+        "icon": "https://ordermentum-res.cloudinary.com/image/upload/w_60,h_60,c_pad/v1547682813/tcsklsh6yuevsnjzf9rf.png",
+        "print": "https://ordermentum-res.cloudinary.com/image/upload/w_650,h_80,c_pad/v1547682813/tcsklsh6yuevsnjzf9rf.png",
+        "mini": "https://ordermentum-res.cloudinary.com/image/upload/w_150,h_150,c_pad/v1547682813/tcsklsh6yuevsnjzf9rf.png",
+        "small": "https://ordermentum-res.cloudinary.com/image/upload/w_200,h_200,c_pad/v1547682813/tcsklsh6yuevsnjzf9rf.png",
+        "medium": "https://ordermentum-res.cloudinary.com/image/upload/w_400,h_400,c_pad/v1547682813/tcsklsh6yuevsnjzf9rf.png",
+        "large": "https://ordermentum-res.cloudinary.com/image/upload/w_600,h_600,c_pad/v1547682813/tcsklsh6yuevsnjzf9rf.png",
+        "name": "-"
+      },
     }
   ]
 }
 ```
 
+
 This endpoint retrieves all products.
+Products will return a list of image sizes and image name
 
 ### HTTP Request
 
@@ -47,11 +59,11 @@ This endpoint retrieves all products.
 
 ### Query Parameters
 
-Parameter | Default | Description
---------- | ------- | -----------
-pageNo | 1 | Page number
-pageSize | 25 | Number of products in the response
-supplierId | null | The supplier to retreive the products for
+| Parameter  | Default | Description                               |
+| ---------- | ------- | ----------------------------------------- |
+| pageNo     | 1       | Page number                               |
+| pageSize   | 25      | Number of products in the response        |
+| supplierId | null    | The supplier to retreive the products for |
 
 
 ## Create a Product
@@ -108,9 +120,9 @@ This endpoint retrieves a specific product.
 
 ### URL Parameters
 
-Parameter | Description
---------- | -----------
-ID | The ID of the product to retrieve
+| Parameter | Description                       |
+| --------- | --------------------------------- |
+| ID        | The ID of the product to retrieve |
 
 ## Update a specific product
 
@@ -131,9 +143,9 @@ This endpoint updates a specific product
 
 ### URL Parameters
 
-Parameter | Description
---------- | -----------
-ID | The ID of the product to update
+| Parameter | Description                     |
+| --------- | ------------------------------- |
+| ID        | The ID of the product to update |
 
 
 ## Delete a specific product
@@ -154,6 +166,6 @@ This endpoint deletes a specific product
 
 ### URL Parameters
 
-Parameter | Description
---------- | -----------
-ID | The ID of the product to delete
+| Parameter | Description                     |
+| --------- | ------------------------------- |
+| ID        | The ID of the product to delete |
